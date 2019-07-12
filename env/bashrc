@@ -51,10 +51,9 @@ function setup_environment(){
   shopt -s histappend
   shopt -s checkwinsize
 
-  export HISTSIZE=1000
-  export HISTFILESIZE=2000
+  export HISTSIZE=10000
+  export HISTFILESIZE=20000
   export CHARSET=UTF-8
-  export PAGER=less
   export PS1='$(echo -e $"'"\xF0\x9F\x99\x85"'") \[\033[32m\]\u \[\033[33m\]\w($(git branch 2>/dev/null | sed -n "s/* \(.*\)/\1/p"))\[\033[00m\]$ '
   export JAVA_HOME=$(dirname $(readlink -f $(which java)) | sed 's:/bin::')
   export PATH=$PATH:$JAVA_HOME/bin
